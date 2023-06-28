@@ -1,4 +1,4 @@
-'''
+
 #Assignment 1
 a=int(input("Enter 1 num : "))
 b=int(input("Enter 2 num : "))
@@ -108,7 +108,7 @@ while i<=10:
     i+=1
 else:
     print("it has break")
-'''
+
 #Assignment 5
 
 l=[]
