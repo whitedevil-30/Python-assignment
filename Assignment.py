@@ -1,3 +1,4 @@
+'''
 #Assignment 1
 a=int(input("Enter 1 num : "))
 b=int(input("Enter 2 num : "))
@@ -68,3 +69,62 @@ while n1==1:
         print("Thank You!! \3")
         exit()
     n1=n
+
+#Assignment 4
+a = "hello"
+for i in a:
+    if i=="l":
+        break  
+    else:
+        print(i)
+else:
+    print("Ite has break")
+
+a = "hello"
+for i in a:
+    if i=="l":
+        continue 
+    else:
+        print(i)
+else:
+    print("Ite has continue")
+
+a = "hello"
+for i in a:
+    if i=="l": 
+        pass 
+    else:
+        print(i)
+else:
+    print("Ite has pass")
+
+i = 1
+while i<=10:
+    if i==5:
+        i+=1
+        continue
+    else:
+        print(i)
+    i+=1
+else:
+    print("it has break")
+'''
+#Assignment 5
+
+l=[]
+print("Enter 5 num")
+for i in range(0,5):
+    a=int(input())
+    l.append(a)
+
+print("Sum : ",sum(l))
+print("Min : ",min(l))
+print("Max : ",max(l))
+l.sort()
+print("Ascending : ",l)
+l.sort(reverse=True)
+print("Descending : ",l)
+print(tuple(l))
+del l
+print(l)
+
