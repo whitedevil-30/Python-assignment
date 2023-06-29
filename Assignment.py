@@ -110,10 +110,9 @@ else:
     print("it has break")
 
 #Assignment 5
-
 l=[]
 print("Enter 5 num")
-for i in range(0,5):
+for i in range(1,6):
     a=int(input())
     l.append(a)
 
@@ -128,3 +127,72 @@ print(tuple(l))
 del l
 print(l)
 
+#Assignment 6
+def ds(rollno,name):
+    ls = [rollno,name]
+    tp = (rollno,name)
+    dt = {"rollno":rollno,"name":name}
+    st = {rollno,name}
+    print("\n\nBefore changes=\n")
+    print(ls)
+    print(tp)
+    print(dt)
+    print(st)
+    ls[0] = 20
+    ls[1] = "xyz"
+    tp = (20,"xyz")
+    dt.update({"rollno":20,"name":"xyz"})
+    st = {20,"xyz"}
+    print("\nAfter changes=\n")
+    print(ls)
+    print(tp)
+    print(dt)
+    print(st)
+    
+    del ls
+    del tp
+    del dt
+    del st
+nm = input("Enter name : ")
+rol = int(input("Enter rollno : "))
+ds(rol,nm)
+
+#Assignment 7
+def fn(file="abc.txt"):
+    f = open(file,'a')
+    rollno = input("Enter your roll number : ")
+    name = input("Enter your name : ")
+    div = input("Enter your div : ")
+    f.writelines([rollno,"\n",name,"\n",div])
+
+    f = open(file,'r')
+    data =f.readlines()
+    for i in data:
+        print(i)
+
+fn()
+
+#Assignment 8
+class A:
+    def __init__(self,a,b,c):
+        self.__A = a
+        self._B = b
+        self.C = c
+    def display(self):
+        print("A=",self.__A)
+        print("B=",self._b)
+        print("C=",self.C)
+class B(A):
+    def __init__(self,a,b,c):
+        super().__init__(a,b,c)
+    def display(self):
+        try:
+            print("A is private")
+            raise Exception
+        except Exception:
+            print("Exception occured")
+        finally:
+            print("B=",self._B)
+            print("C=",self.C)
+obj = B(10, 20, 30)
+obj.display()
